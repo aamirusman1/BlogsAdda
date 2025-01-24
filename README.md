@@ -15,3 +15,14 @@ npm run dev
 
 - install tailwind (https://tailwindcss.com/docs/installation/using-vite)
   npm install tailwindcss @tailwindcss/vite
+
+- imagekit.io
+  for image optimization
+  Lazy loading images- render images only when they are needed
+  low quality image placeholder instead of showing blanc space
+  File upload with authentication
+  npm i imagekitio-react
+
+- React Router dom
+  npm install react-router-dom@6.28.2
+  Go to Feature overview section for details

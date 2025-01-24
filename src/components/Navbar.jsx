@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Image from "./Image";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -8,11 +9,11 @@ const Navbar = () => {
     <>
       <div className="w-full h-16 md:h-20 flex items-center justify-between">
         {/* LOGO */}
-        <a href="/" className="flex items-center gap-4 text-2xl font-bold">
+        <Link to="/" className="flex items-center gap-4 text-2xl font-bold">
           <Image src="/logo.png" alt="Blog Logo" w={32} h={32} />
 
           <span>Blog Adda</span>
-        </a>
+        </Link>
         {/* MOBILE MENU */}
         <div className="md:hidden">
           {/* MOBILE BUTTON */}
@@ -29,37 +30,37 @@ const Navbar = () => {
               open ? "-right-0" : "-right-[100%]"
             }`}
           >
-            <a href="/" onClick={() => setOpen(false)}>
+            <Link to="/" onClick={() => setOpen(false)}>
               Home
-            </a>
-            <a href="/posts?sort=trending" onClick={() => setOpen(false)}>
+            </Link>
+            <Link to="/posts?sort=trending" onClick={() => setOpen(false)}>
               Trending
-            </a>
-            <a href="/posts?sort=popular" onClick={() => setOpen(false)}>
+            </Link>
+            <Link to="/posts?sort=popular" onClick={() => setOpen(false)}>
               Most Popular
-            </a>
-            <a href="/" onClick={() => setOpen(false)}>
+            </Link>
+            <Link to="/" onClick={() => setOpen(false)}>
               About
-            </a>
-            <a href="/login" onClick={() => setOpen(false)}>
+            </Link>
+            <Link to="/login" onClick={() => setOpen(false)}>
               <button className="py-2 px-4 rounded-3xl bg-blue-800 text-white">
                 Login 👋
               </button>
-            </a>
+            </Link>
           </div>
         </div>
         {/* DESKTOP MENU */}
         <div className="hidden md:flex items-center gap-8 xl:gap-12 font-medium">
-          <a href="/">Home</a>
-          <a href="/posts?sort=trending">Trending</a>
-          <a href="/posts?sort=popular">Most Popular</a>
-          <a href="/">About</a>
+          <Link to="/">Home</Link>
+          <Link to="/posts?sort=trending">Trending</Link>
+          <Link to="/posts?sort=popular">Most Popular</Link>
+          <Link to="/">About</Link>
 
-          <a href="/login">
+          <Link to="/login">
             <button className="py-2 px-4 rounded-3xl bg-blue-800 text-white">
               Login 👋
             </button>
-          </a>
+          </Link>
         </div>
       </div>
     </>
