@@ -1,10 +1,19 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import Navbar from "./components/Navbar";
 
 function App() {
-  return <>This is blog</>;
+  return (
+    <>
+      <div className="px-4 md:px-8 lg:px-16 lx:px-32 2xl:px-64">
+        {/* NAVBAR */}
+        <Navbar />
+        {/* BREADCRUMB */}
+        {/* INTRODUCTION */}
+        {/* FEATURED POSTS */}
+        {/* POST LIST */}
+      </div>
+    </>
+  );
 }
 
 export default App;

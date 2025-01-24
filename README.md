@@ -12,3 +12,6 @@ Currently, two official plugins are available:
 npm create vite@latest
 npm install
 npm run dev
+
+- install tailwind (https://tailwindcss.com/docs/installation/using-vite)
+  npm install tailwindcss @tailwindcss/vite
