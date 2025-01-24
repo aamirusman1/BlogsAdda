@@ -26,3 +26,8 @@ npm run dev
 - React Router dom
   npm install react-router-dom@6.28.2
   Go to Feature overview section for details
+
+- Clerk.com
+  User authentication and Management
+  npm install @clerk/clerk-react
+  https://clerk.com/docs/components/authentication/sign-in

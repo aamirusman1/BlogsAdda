@@ -18,6 +18,8 @@ import {
   Link,
 } from "react-router-dom";
 
+import { ClerkProvider } from "@clerk/clerk-react";
+
 const router = createBrowserRouter([
   {
     element: <MainLayout />,
@@ -50,7 +52,18 @@ const router = createBrowserRouter([
   },
 ]);
 
+// Import your Publishable Key
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
+
+if (!PUBLISHABLE_KEY) {
+  throw new Error("Missing Publishable Key");
+}
+
 createRoot(document.getElementById("root")).render(
   // <App />
-  <RouterProvider router={router} />
+  <StrictMode>
+    <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
+      <RouterProvider router={router} />
+    </ClerkProvider>
+  </StrictMode>
 );
