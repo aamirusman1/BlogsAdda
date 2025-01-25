@@ -25,3 +25,8 @@ const Image = ({ src, className, w, h, alt }) => {
 };
 
 export default Image;
+
+//Note:
+//lqip: Low-Quality Image Placeholder
+//provides a small, low-quality version of the image while the full-resolution version is loading.
+//quality: 20: Sets the quality of the placeholder image to 20%
