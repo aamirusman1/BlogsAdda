@@ -31,3 +31,8 @@ npm run dev
   User authentication and Management,
   npm install @clerk/clerk-react ,
   https://clerk.com/docs/components/authentication/sign-in
+
+- Quill (Text Editor)
+  npm install react-quill ,
+  npm install react-quill-new ,
+  import 'quill/dist/quill.snow.css'; (For react quill new)
